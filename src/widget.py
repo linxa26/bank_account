@@ -4,26 +4,14 @@ from masks import get_mask_card_number, get_mask_account
 def mask_account_card(number: str) -> str:
     """
     Определяет тип входного номера и возвращает замаскированное значение.
-
-    Функция принимает номер банковской карты или номер счёта,
-    определяет их тип по длине строки и передаёт номер
-    в соответствующую функцию маскирования.
-
-    Логика работы:
-    если длина номера равна 16 символам - номер считается номером карты;
-    если длина номера равна 20 символам - номер считается номером счёта;
-    в остальных случаях функция возвращает исходное значение без изменений.
-
-    Маскирование выполняется с помощью функций из модуля masks.
     """
     number = str(number)
-    number_len = len(number)
 
-    if number_len == 16:
-        return get_mask_card_number(number)
+    if len(number) == 16:
+        return str(get_mask_card_number(number))
 
-    if number_len == 20:
-        return get_mask_account(number)
+    if len(number) == 20:
+        return str(get_mask_account(number))
 
     return number
 
