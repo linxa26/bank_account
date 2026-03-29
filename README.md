@@ -28,3 +28,12 @@ operations = [
 ]
 
 result = filter_by_state(operations)
+
+## Тестирование
+
+Для запуска тестов используется pytest.
+
+Установка зависимостей:
+
+```bash
+poetry install
