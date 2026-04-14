@@ -1,8 +1,0 @@
-__pycache__/
-*.pyc
-.mypy_cache/
-# Virtual environment
-.venv/
-
-# PyCharm
-.idea/

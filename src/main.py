@@ -1,6 +1,5 @@
-from src.widget import mask_account_card, get_date
 from processing import filter_by_state, sort_by_date
-
+from src.widget import get_date, mask_account_card
 
 if __name__ == "__main__":
     print(mask_account_card("1234567890123456"))

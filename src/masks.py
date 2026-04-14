@@ -30,7 +30,7 @@ def get_mask_card_number(card_number: str) -> str:
     """
     Результат разбивается на блоки по 4 символа.
     """
-    blocks = [masked[i: i + 4] for i in range(0, len(masked), 4)]
+    blocks = [masked[i:i + 4] for i in range(0, len(masked), 4)]
     return " ".join(blocks)
 
 

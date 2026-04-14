@@ -28,3 +28,53 @@ operations = [
 ]
 
 result = filter_by_state(operations)
+
+## Тесты
+
+Для запуска тестов используйте:
+
+pytest
+
+Для проверки покрытия:
+
+pytest --cov=src
+
+## Модуль generators
+
+Модуль содержит генераторы для обработки транзакций и генерации данных.
+
+---
+
+### filter_by_currency
+
+Фильтрует список транзакций по заданной валюте.
+
+```python
+from src.generators import filter_by_currency
+
+transactions = [
+    {"operationAmount": {"currency": {"code": "USD"}}},
+    {"operationAmount": {"currency": {"code": "EUR"}}},
+]
+
+result = list(filter_by_currency(transactions, "USD"))
+
+## Модуль generators
+
+Модуль содержит генераторы для обработки транзакций и генерации данных.
+
+---
+
+### filter_by_currency
+
+Фильтрует список транзакций по заданной валюте.
+
+```python
+from src.generators import filter_by_currency
+
+transactions = [
+    {"operationAmount": {"currency": {"code": "USD"}}},
+    {"operationAmount": {"currency": {"code": "EUR"}}},
+]
+
+result = list(filter_by_currency(transactions, "USD"))

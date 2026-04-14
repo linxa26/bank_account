@@ -86,7 +86,7 @@ version = "7.13.5"
 description = "Code coverage measurement for Python"
 optional = false
 python-versions = ">=3.10"
-groups = ["main"]
+groups = ["main", "dev"]
 files = [
     {file = "coverage-7.13.5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:e0723d2c96324561b9aa76fb982406e11d93cdb388a7a7da2b16e04719cf7ca5"},
     {file = "coverage-7.13.5-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:52f444e86475992506b32d4e5ca55c24fc88d73bcbda0e9745095b28ef4dc0cf"},
@@ -564,7 +564,7 @@ version = "7.1.0"
 description = "Pytest plugin for measuring coverage."
 optional = false
 python-versions = ">=3.9"
-groups = ["main"]
+groups = ["main", "dev"]
 files = [
     {file = "pytest_cov-7.1.0-py3-none-any.whl", hash = "sha256:a0461110b7865f9a271aa1b51e516c9a95de9d696734a2f71e3e78f46e1d4678"},
     {file = "pytest_cov-7.1.0.tar.gz", hash = "sha256:30674f2b5f6351aa09702a9c8c364f6a01c27aae0c1366ae8016160d1efc56b2"},
@@ -644,7 +644,7 @@ files = [
     {file = "tomli-2.3.0-py3-none-any.whl", hash = "sha256:e95b1af3c5b07d9e643909b5abbec77cd9f1217e6d0bca72b0234736b9fb1f1b"},
     {file = "tomli-2.3.0.tar.gz", hash = "sha256:64be704a875d2a59753d80ee8a533c3fe183e3f06807ff7dc2232938ccb01549"},
 ]
-markers = {main = "python_full_version <= \"3.11.0a6\"", dev = "python_version == \"3.10\"", lint = "python_version == \"3.10\""}
+markers = {main = "python_full_version <= \"3.11.0a6\"", dev = "python_full_version <= \"3.11.0a6\"", lint = "python_version == \"3.10\""}
 
 [[package]]
 name = "typing-extensions"
@@ -662,4 +662,4 @@ markers = {main = "python_version == \"3.10\"", dev = "python_version == \"3.10\
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "9133387188a314572549d91eda1c00bfe00a80f9d3e16ebf899e9a50c75dcad3"
+content-hash = "e12dccd93fff1d91a3651db35c70967f6a2d459c1a52ad468b829fbde81c4c97"
