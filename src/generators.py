@@ -1,7 +1,7 @@
 from typing import Generator
 
 
-def filter_by_currency(transactions: list, currency: str) -> list:
+def filter_by_currency(transactions: list[dict], currency: str) -> Generator[dict, None, None]:
     """Функция принимает на вход список словарей, представляющих
     транзакции,а возвращает итератор, который поочередно выдает
     транзакции, где валюта операции соответствует заданной"""
@@ -15,7 +15,7 @@ def transaction_descriptions(transactions: list[dict]) -> Generator[str, None, N
     """Функция принимает список словарей с транзакциями
     и возвращает описание каждой операции по очереди."""
     for i in transactions:
-        yield i.get("description")
+        yield i.get("description", "")
 
 
 def card_number_generator(start: int, stop: int) -> Generator[str, None, None]:
@@ -28,4 +28,4 @@ def card_number_generator(start: int, stop: int) -> Generator[str, None, None]:
         yield " ".join(s[i:i + 4] for i in range(0, 16, 4))
 
 
-print(list(card_number_generator(5, 2)))
+
