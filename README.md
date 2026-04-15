@@ -29,6 +29,7 @@ operations = [
 
 result = filter_by_state(operations)
 
+<<<<<<< HEAD
 ## Тесты
 
 Для запуска тестов используйте:
@@ -78,3 +79,13 @@ transactions = [
 ]
 
 result = list(filter_by_currency(transactions, "USD"))
+=======
+## Тестирование
+
+Для запуска тестов используется pytest.
+
+Установка зависимостей:
+
+```bash
+poetry install
+>>>>>>> e0614641b357ca006ea6cb491d77cadf8995deaf
