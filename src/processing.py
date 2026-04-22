@@ -1,19 +1,12 @@
-def filter_by_state(operations, state="EXECUTED"):
+def filter_by_state(operations: list[dict], state: str = "EXECUTED") -> list[dict]:
     """
     Фильтрует список операций по значению ключа state.
     """
-    return [
-        operation for operation in operations
-        if operation.get("state") == state
-    ]
+    return [operation for operation in operations if operation.get("state") == state]
 
 
-def sort_by_date(operations, reverse=True):
+def sort_by_date(operations: list[dict], reverse: bool = True) -> list[dict]:
     """
     Сортирует список операций по дате.
     """
-    return sorted(
-        operations,
-        key=lambda operation: operation.get("date", ""),
-        reverse=reverse
-    )
+    return sorted(operations, key=lambda operation: operation.get("date", ""), reverse=reverse)
