@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f68bd2d-45ff-4075-8068-0cf4ad0b91b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_masks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,21 +51,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.pytest for test_card_number_generator.test_card_generator_simple.executor": "Run",
+    "Python tests.pytest for test_log.test_success.executor": "Run",
     "Python tests.pytest for test_transaction_descriptions.test_filter_by_currency.executor": "Run",
     "Python tests.pytest for test_transaction_descriptions.test_multiple_transaction_descriptions.executor": "Run",
     "Python tests.pytest for test_transaction_descriptions.test_no_transaction_descriptions.executor": "Run",
     "Python tests.pytest for test_transaction_descriptions.test_transaction_descriptions.executor": "Run",
     "Python tests.pytest in test_filter_by_currency.py.executor": "Run",
+    "Python tests.pytest in test_log.py.executor": "Run",
     "Python tests.pytest in test_transaction_descriptions.py.executor": "Run",
     "Python.generators.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging feature/generator",
+    "git-widget-placeholder": "feature/decorators",
     "last_opened_file_path": "C:/Users/shmel/PycharmProjects/Python_Poetry",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test_card_number_generator.test_card_generator_simple">
+  <component name="RunManager" selected="Python tests.pytest in test_log.py">
     <configuration name="generators" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bank_account" />
       <option name="ENV_FILES" value="" />
@@ -109,7 +107,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_transaction_descriptions.test_multiple_transaction_descriptions" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_log.test_success" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="bank_account" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,7 +120,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_transaction_descriptions.test_multiple_transaction_descriptions&quot;" />
+      <option name="_new_target" value="&quot;test_log.test_success&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -143,7 +141,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_transaction_descriptions.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_log.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="bank_account" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,17 +154,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_transaction_descriptions.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_log.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_log.py" />
+        <item itemvalue="Python tests.pytest for test_log.test_success" />
         <item itemvalue="Python tests.pytest for test_card_number_generator.test_card_generator_simple" />
         <item itemvalue="Python.generators" />
         <item itemvalue="Python tests.pytest for test_transaction_descriptions.test_transaction_descriptions" />
-        <item itemvalue="Python tests.pytest in test_transaction_descriptions.py" />
-        <item itemvalue="Python tests.pytest for test_transaction_descriptions.test_multiple_transaction_descriptions" />
       </list>
     </recent_temporary>
   </component>
