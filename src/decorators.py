@@ -5,6 +5,12 @@ R = TypeVar("R")
 
 
 def log(filename: Optional[str] = None) -> Callable[[Callable[..., R]], Callable[..., R]]:
+    """
+    Декоратор для логирования выполнения функции.
+    При успешном выполнении выводит сообщение "ok",
+    при ошибке — сообщение "error" с деталями.
+    Если указан filename, запись идет в файл, иначе — в консоль.
+    """
     def decorator(func: Callable[..., R]) -> Callable[..., R]:
 
         @wraps(func)
