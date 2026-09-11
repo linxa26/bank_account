@@ -8,3 +8,6 @@ __pycache__/
 .idea/
 htmlcov/
 .env
+data/broken.json
+data/not_list.json
+logs/
