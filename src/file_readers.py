@@ -3,7 +3,7 @@ import csv
 import pandas as pd
 
 
-def read_csv_transactions(file_path):
+def read_csv_transactions(file_path: str) -> list[dict]:
     """
     Считывает финансовые операции из CSV-файла.
 
@@ -16,7 +16,7 @@ def read_csv_transactions(file_path):
         return transactions
 
 
-def read_excel_transactions(file_path):
+def read_excel_transactions(file_path: str) -> list[dict]:
     """
     Считывает финансовые операции из Excel-файла.
 
