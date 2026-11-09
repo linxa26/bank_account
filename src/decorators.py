@@ -1,5 +1,5 @@
-from typing import Callable, TypeVar, Optional
 from functools import wraps
+from typing import Callable, Optional, TypeVar
 
 R = TypeVar("R")
 
@@ -11,6 +11,7 @@ def log(filename: Optional[str] = None) -> Callable[[Callable[..., R]], Callable
     при ошибке — сообщение "error" с деталями.
     Если указан filename, запись идет в файл, иначе — в консоль.
     """
+
     def decorator(func: Callable[..., R]) -> Callable[..., R]:
 
         @wraps(func)

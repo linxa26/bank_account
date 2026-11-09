@@ -1,11 +1,10 @@
-
 import re
 
 from src.file_readers import read_csv_transactions, read_excel_transactions
-from src.processing import filter_by_state, sort_by_date
-from src.widget import get_date
 from src.masks import get_mask_account, get_mask_card_number
+from src.processing import filter_by_state, sort_by_date
 from src.utils import load_transactions
+from src.widget import get_date
 
 
 def format_account(account: str) -> str:
@@ -56,15 +55,11 @@ def main() -> None:
             break
 
         elif choice == "2":
-            transactions = read_csv_transactions(
-                "src/data/transactions.csv"
-            )
+            transactions = read_csv_transactions("src/data/transactions.csv")
             break
 
         elif choice == "3":
-            transactions = read_excel_transactions(
-                "src/data/transactions_excel.xlsx"
-            )
+            transactions = read_excel_transactions("src/data/transactions_excel.xlsx")
             break
 
         else:
@@ -96,19 +91,14 @@ def main() -> None:
     if ask_yes_no("\nОтсортировать операции по дате? Да/Нет: "):
 
         while True:
-            order = input(
-                "Отсортировать по возрастанию или по убыванию? "
-            ).strip().lower()
+            order = input("Отсортировать по возрастанию или по убыванию? ").strip().lower()
 
             if order in ("по возрастанию", "по убыванию"):
                 break
 
             print("Введите 'по возрастанию' или 'по убыванию'.")
 
-        transactions = sort_by_date(
-            transactions,
-            reverse=(order == "по убыванию")
-        )
+        transactions = sort_by_date(transactions, reverse=(order == "по убыванию"))
 
     # Фильтрация по валюте
     if ask_yes_no("\nВыводить только рублёвые транзакции? Да/Нет: "):
@@ -118,16 +108,13 @@ def main() -> None:
             for transaction in transactions
             if (
                 transaction.get("currency_code")
-                or transaction.get("operationAmount", {})
-                .get("currency", {})
-                .get("code")
-            ) == "RUB"
+                or transaction.get("operationAmount", {}).get("currency", {}).get("code")
+            )
+            == "RUB"
         ]
 
     # Фильтрация по описанию
-    if ask_yes_no(
-        "\nОтфильтровать список транзакций по слову в описании? Да/Нет: "
-    ):
+    if ask_yes_no("\nОтфильтровать список транзакций по слову в описании? Да/Нет: "):
 
         search_word = input("Введите слово для поиска: ").strip()
 
@@ -145,10 +132,7 @@ def main() -> None:
     print("\nРаспечатываю итоговый список транзакций...")
 
     if not transactions:
-        print(
-            "Не найдено ни одной транзакции, "
-            "подходящей под ваши условия фильтрации."
-        )
+        print("Не найдено ни одной транзакции, " "подходящей под ваши условия фильтрации.")
         return
 
     print(f"Всего банковских операций в выборке: {len(transactions)}")
@@ -158,16 +142,10 @@ def main() -> None:
         date = get_date(str(transaction.get("date", "")))
         description = transaction.get("description", "Без описания")
 
-        amount = transaction.get(
-            "amount",
-            transaction.get("operationAmount", {}).get("amount", 0)
-        )
+        amount = transaction.get("amount", transaction.get("operationAmount", {}).get("amount", 0))
 
         currency = transaction.get(
-            "currency_name",
-            transaction.get("operationAmount", {})
-            .get("currency", {})
-            .get("name", "")
+            "currency_name", transaction.get("operationAmount", {}).get("currency", {}).get("name", "")
         )
 
         sender = format_account(str(transaction.get("from", "")))

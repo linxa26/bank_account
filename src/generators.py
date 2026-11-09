@@ -25,4 +25,4 @@ def card_number_generator(start: int, stop: int) -> Generator[str, None, None]:
     где X — цифра номера карты."""
     for number in range(start, stop + 1):
         s = str(number).zfill(16)
-        yield " ".join(s[i:i + 4] for i in range(0, 16, 4))
+        yield " ".join(s[i : i + 4] for i in range(0, 16, 4))
