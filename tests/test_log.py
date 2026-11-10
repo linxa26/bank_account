@@ -1,4 +1,5 @@
 import pytest
+
 from src.decorators import log
 
 
@@ -16,7 +17,6 @@ def test_success(capsys):
 
 def test_error(capsys):
     @log()
-
     def f():
         return 1 / 0
 
