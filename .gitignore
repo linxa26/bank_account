@@ -1,8 +1,22 @@
+
+# Python
 __pycache__/
 *.pyc
 .mypy_cache/
+
 # Virtual environment
 .venv/
 
 # PyCharm
 .idea/
+
+# Environment variables and API keys
+.env
+.env.*
+!.env.example
+
+# Tests and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
